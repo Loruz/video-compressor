@@ -4,14 +4,16 @@ A small macOS desktop app for compressing video files to smaller MP4s.
 
 The app is built with Tauri: a plain HTML/CSS/JavaScript interface talks to a Rust backend, and Rust runs `ffmpeg` to do the actual video compression.
 
+![App UI Preview](./Ui.png)
+
 ## What It Does
 
 - Select a video with the file picker.
 - Drag and drop a video onto the app window.
 - Choose a compression preset:
-  - High: better quality, larger output
-  - Medium: balanced default
-  - Small: smaller output, more quality loss
+    - High: better quality, larger output
+    - Medium: balanced default
+    - Small: smaller output, more quality loss
 - Save the compressed video next to the original file.
 - Avoid overwriting existing compressed files.
 - Clear the selected file and choose another one.
