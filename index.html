@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Compressor</title>
+  </head>
+  <body>
+    <main class="shell">
+      <section class="panel" aria-labelledby="app-title">
+        <p class="eyebrow">macOS utility</p>
+        <h1 id="app-title">Video Compressor</h1>
+        <p class="lede">Pick a video, choose how small it should get, and save a compressed MP4 next to the original.</p>
+
+        <div class="field">
+          <label for="filePath">Video file</label>
+          <div class="file-row">
+            <input id="filePath" type="text" readonly placeholder="No video selected" />
+            <button id="selectFile" type="button">Choose</button>
+            <button id="clearFile" class="secondary" type="button" disabled>Clear</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="quality">Compression</label>
+          <select id="quality">
+            <option value="medium" selected>Medium - balanced size and quality</option>
+            <option value="high">High - better quality, larger file</option>
+            <option value="small">Small - much smaller, more quality loss</option>
+          </select>
+        </div>
+
+        <button id="compress" class="primary" type="button" disabled>Compress video</button>
+
+        <div id="status" class="status" role="status" aria-live="polite">Waiting for a video.</div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
